@@ -1,0 +1,13 @@
+[rhel8]
+yyadavcatalog.example.com
+
+[rhel9]
+host1
+host2
+
+[rhel7]
+
+[rhel_vm:children]
+rhel7
+rhel8
+rhel9

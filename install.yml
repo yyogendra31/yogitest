@@ -1,0 +1,15 @@
+---
+- name: Install the required packages on the web server
+  hosts: all
+  tasks:
+    - name: Install the  packages on server
+      ansible.builtin.dnf:
+       name:
+         - "{{ package }}"
+       state: present
+
+    - name: Start the service
+      ansible.builtin.service:
+       name: "{{ web_service }}"
+       enabled: true
+       state: started
